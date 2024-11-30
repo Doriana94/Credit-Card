@@ -1,0 +1,113 @@
+@import "../../assets/variables/variables.scss";
+
+.container_form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 180px;
+  gap: 20px;
+
+  .text {
+    font-family: $myFont;
+    font-size: $myFontSize;
+    font-weight: $myFontWeight;
+  }
+
+  .input {
+    width: 420px;
+    height: 40px;
+    border-radius: 10px;
+    border: $myBorder;
+    margin-top: -10px;
+    padding-left: 10px;
+  }
+
+  .container_date {
+    width: 420px;
+    height: 200px;
+
+    .date_cvc {
+      width: 100%;
+      height: 12%;
+      display: flex;
+      gap: 200px;
+      font-family: $myFont;
+      font-weight: $myFontWeight;
+      font-size: $myFontSize;
+    }
+
+    .input_date_cvc {
+      display: flex;
+      gap: 18px;
+    }
+
+    .input_date {
+      width: 90px;
+      height: 40px;
+      border-radius: 10px;
+      border: $myBorder;
+      padding-left: 10px;
+    }
+
+    .input_cvc {
+      height: 40px;
+      border-radius: 10px;
+      border: $myBorder;
+      margin-left: 25px;
+      padding-left: 10px;
+    }
+  }
+
+  .container_btn {
+    width: 420px;
+    height: 50px;
+    margin-top: 20px;
+
+    .button {
+      width: 420px;
+      height: 40px;
+      border-radius: 10px;
+      border: none;
+      background: linear-gradient(to right, #4a00e0, #8e2de2);
+      font-size: 14px;
+      color: #ffffff;
+    }
+  }
+
+  .alert {
+    font-weight: bold;
+    color: #511fa8;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container_form {
+    padding-left: 20px;
+    gap: 10px;
+
+    .input,
+    .container_date,
+    .container_btn {
+      width: 100%;
+    }
+
+    .date_cvc {
+      gap: 50px;
+    }
+
+    .input_date_cvc {
+      flex-direction: column;
+
+      .input_date,
+      .input_cvc {
+        width: 100%;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  }
+}
